@@ -19,6 +19,17 @@ interface ExampleInterface {
 
 public class FunctionalInterfaceCheck {
 	public static void main(String[] args) {
+		
+		//One way of creating instance of FI
+		ExampleInterface ei =  new ExampleInterface() {
+			
+			@Override
+			public int randomCalculate(int a, int b) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
+		
 		ExampleInterface exampleInterface = (a, b) -> {
 			int randomCal = a * b / 20;
 			Random random = new Random();
@@ -29,6 +40,7 @@ public class FunctionalInterfaceCheck {
 		exampleInterface.print(exampleInterface.randomCalculate(10, 20));
 
 //Type of FI
+		
 		// 1.Supplier - abstract method T get(), providing value without taking any
 		// inputs ,commonly use for generating values/lazy initialization
 		Supplier<Integer> randomNumberSupplier = () -> (int) (Math.random() * 100);
