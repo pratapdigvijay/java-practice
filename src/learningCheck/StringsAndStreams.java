@@ -13,33 +13,32 @@ import java.util.stream.Stream;
 
 public class StringsAndStreams {
 	public static void main(String[] args) {
-		System.out.println(duplicates(List.of("Java", "Spring", "Java", "Boot", "Cloud", "Spring", "Streams")));
-		System.out.println(duplicates(Arrays.asList(5, 13, 4, 21, 13, 27, 2, 59, 59, 34)));
-
-		System.out.println(findFirst(List.of("Java", "Spring", "Java", "Boot", "Cloud", "Spring", "Streams")));
-
-		String s = "Sachin";
-		s.concat("Tendulkar");
-		System.out.println(s);
-		s = "Sachin".concat(" Tendulkar");
-		System.out.println(s);
-
-		// using string joiner for delimiters
-		StringJoiner sj = new StringJoiner("", ":", ":");
-		System.out.println(sj.add(s));
-
-		// Another way for finding first element
-		List<Integer> myList = Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
-		myList.stream().findFirst().ifPresent(System.out::println);
-		
-		myList.forEach(System.out::println);
-
-		// sorting elements
-		myList.stream().sorted().forEach(System.out::print);
-		System.out.println();
-		System.out.println(findMax(Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15)));
-
-		System.out.println(findMaxSecond(new int[] { 10, 15, 8, 49, 25, 98, 98, 32, 15 }));
+		/*
+		 * System.out.println(duplicates(List.of("Java", "Spring", "Java", "Boot",
+		 * "Cloud", "Spring", "Streams")));
+		 * System.out.println(duplicates(Arrays.asList(5, 13, 4, 21, 13, 27, 2, 59, 59,
+		 * 34)));
+		 * 
+		 * System.out.println(findFirst(List.of("Java", "Spring", "Java", "Boot",
+		 * "Cloud", "Spring", "Streams")));
+		 * 
+		 * String s = "Sachin"; s.concat("Tendulkar"); System.out.println(s); s =
+		 * "Sachin".concat(" Tendulkar"); System.out.println(s);
+		 * 
+		 * // using string joiner for delimiters StringJoiner sj = new StringJoiner("",
+		 * ":", ":"); System.out.println(sj.add(s));
+		 * 
+		 * // Another way for finding first element List<Integer> myList =
+		 * Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
+		 * myList.stream().findFirst().ifPresent(System.out::println);
+		 * 
+		 * myList.forEach(System.out::println);
+		 * 
+		 * // sorting elements myList.stream().sorted().forEach(System.out::print);
+		 * System.out.println(); System.out.println(findMax(Arrays.asList(10, 15, 8, 49,
+		 * 25, 98, 98, 32, 15)));
+		 * 
+		 */	System.out.println(findMaxSecond(new int[] { 10, 15, 8, 49, 25, 98, 98, 32, 15 }));
 
 		System.out.println(frequencyCount(
 				Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil")));

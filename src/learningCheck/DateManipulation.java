@@ -3,6 +3,7 @@ package learningCheck;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Objects;
 
 public class DateManipulation {
 	public static void main(String[] args) {
@@ -18,5 +19,12 @@ public class DateManipulation {
 		
 		System.out.println(format.equals(date2.toString()));
 		
+		
+		String str = "";
+		System.out.println(Objects.nonNull(str));
+		
+		System.out.println(str.isBlank());
+	//	System.out.println(str.isEmpty());
+	//	System.out.println(str.length());
 	}
 }

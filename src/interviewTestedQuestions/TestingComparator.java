@@ -28,7 +28,7 @@ public class TestingComparator {
 		employees.add(new Employee("Ramesh", 450000, 30));
 		employees.add(new Employee("John", 450000, 29));
 		employees.add(new Employee("Tom", 450000, 30));
-		employees.add(new Employee("Pramod", 500000, 29));
+		employees.add(new Employee("Pramod", 400000, 29));
 
 		// sorting using defined comparator based on name
 		employees.stream().sorted(comparator2).forEach(f -> System.out.println(f));
@@ -46,6 +46,11 @@ public class TestingComparator {
 		
 		
 		System.out.println(118 & 15) ;	
+		
+		//checking max function to return max salary
+		Employee employee = employees.stream().max(Comparator.comparingDouble(Employee::getSalary)).get();
+		System.out.println(employee);
+		
 	}
 }
 
