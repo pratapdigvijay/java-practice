@@ -1,5 +1,7 @@
 package interviewTestedQuestions;
 
+import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -8,14 +10,14 @@ import java.util.stream.Collectors;
 public class RepeatedCharactersWithNumbers {
 
 	// duplicate/frequency of each element in list
-		public static <T> String frequencyCount(List<T> list) {
+		public static <T> Map<Object, Object> frequencyCount(List<T> list) {
 			Map<T, Long> map = list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 			System.out.println(map);
 			
 			
-//			return map.entrySet().stream().sorted(Map.Entry.comparingByValue())
-//					.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-return null;
+		return map.entrySet().stream().sorted(Map.Entry.comparingByValue())
+					.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+//return null;
 		}
 	
 	public static void main(String[] args) {
@@ -51,6 +53,10 @@ return null;
 		    // Also if you just want one line use .print instead of println
 		    System.out.print(str.charAt(i)+""+count);
 		}
+		
+		System.out.println();
+		
+		System.out.println(frequencyCount(Arrays.asList(str.split(""))));
 		
 	}
 }

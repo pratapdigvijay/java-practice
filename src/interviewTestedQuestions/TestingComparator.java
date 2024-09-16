@@ -51,6 +51,9 @@ public class TestingComparator {
 		Employee employee = employees.stream().max(Comparator.comparingDouble(Employee::getSalary)).get();
 		System.out.println(employee);
 		
+		List<Integer> list = employees.stream().map(m -> m.getAge()).distinct().toList();
+		System.out.println(list);
+		
 	}
 }
 

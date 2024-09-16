@@ -36,7 +36,7 @@ public class DuplicateValues {
 	        for(int i=0;i<n;i++){
 	        	
 	            int index = arr[i]%n;
-	            
+	        //    System.out.print(index+ " ,");
 	            arr[index]=arr[index]+n;
 	        }
 	        for(int i=0;i<n;i++){
