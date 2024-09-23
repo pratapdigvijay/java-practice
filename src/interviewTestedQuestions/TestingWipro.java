@@ -27,8 +27,10 @@ public class TestingWipro {
 			System.exit(1);
 			return 1;
 		} catch (Exception e) {
+			System.out.println("catch");
 			return 2;
 		} finally {
+			System.out.println("finally");
 			return 3;
 		}
 	}

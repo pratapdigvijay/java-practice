@@ -3,6 +3,7 @@ package interviewTestedQuestions;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TestingComparator {
 
@@ -53,6 +54,8 @@ public class TestingComparator {
 		
 		List<Integer> list = employees.stream().map(m -> m.getAge()).distinct().toList();
 		System.out.println(list);
+		
+	//	list.stream().collect(Collectors.groupingBy(Employee::getSalary, Collectors.toSet()));
 		
 	}
 }
